@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import ReactPlayer from "react-player";
 import Photo from './Photo'
+import Video from './Video'
 
 function Row(props) {
 
@@ -40,11 +40,7 @@ function Row(props) {
                 explanation={item.explanation}
             />
         } else {
-            return <ReactPlayer
-                key={item.date.split("-").join('')}
-                url={item.url}
-                width="30%"
-            />
+            return <Video key={item.date.split("-").join('')} url={item.url} width="30%" />
         }
     })
 

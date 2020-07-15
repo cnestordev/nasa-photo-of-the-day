@@ -8,15 +8,15 @@ function Main(props) {
         return (
             <div className="container">
                 <img src={defaultPic} alt="main nasa" />
-                <p> ore minus nam debitis numquam? Nesciunt, quae? </p>
+                <p className="p-main"> ore minus nam debitis numquam? Nesciunt, quae? </p>
             </div>
         )
     }
 
     return (
         <div className="container">
-            <img src={current} alt="main nasa" />
-            <p> {explanation} </p>
+            <img className="img-main" src={current} alt="main nasa" />
+            <p className="p-main"> {explanation} </p>
         </div>
     )
 }
