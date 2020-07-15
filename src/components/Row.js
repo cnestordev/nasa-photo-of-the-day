@@ -40,7 +40,7 @@ function Row(props) {
                 explanation={item.explanation}
             />
         } else {
-            return <Video key={item.date.split("-").join('')} url={item.url} width="30%" />
+            return <Video key={item.date.split("-").join('')} url={item.url} />
         }
     })
 

@@ -3,14 +3,14 @@ import ReactPlayer from "react-player";
 
 function Video(props) {
     console.log(props)
+    const { url, key, width } = props
+
     return (
         <>
             <ReactPlayer
-                key={props.item.date.split("-").join('')}
-                url={props.item.url}
+                url={url}
                 width="30%"
             />
-            <p>loremipsum dolor sit amet, consectetur adipisicing elit met repellendus</p>
         </>
     )
 }
