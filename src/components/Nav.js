@@ -15,14 +15,16 @@ const Ulist = styled.ul`
 `
 
 const Header = styled.header`
-    background: #505c63;
+    background: #20485e;
     padding: 1rem;
 `
 
 const Item = styled.li`
     margin-right: 4%;
+    color: #ff6f42;
     &:hover {
         cursor: pointer;
+        color: #fff;
     }
 `
 

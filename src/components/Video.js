@@ -11,6 +11,7 @@ function Video(props) {
                 url={url}
                 width="30%"
                 height="auto"
+                style={{ marginTop: "1%" }}
             />
         </>
     )
