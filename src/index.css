@@ -42,3 +42,45 @@ nav {
 .sub-image {
   width: 80%;
 }
+
+.p-subPhoto {
+  background: red;
+  border-radius: 5px;
+  padding: 1%;
+  width: 78%;
+  margin: auto;
+}
+
+.placeholderImg {
+  border-radius: 5px;
+  width: 60%;
+  height: 400px;
+  margin: 1% auto;
+  background: linear-gradient(-90deg, #e0e0e0, #b5b5b5, #e0e0e0, #b5b5b5);
+  background-size: 400% 400%;
+  animation: gradient 2s ease infinite;
+  animation-timing-function: jump-start;
+}
+
+.placeholderTxt {
+  border-radius: 5px;
+  width: 60%;
+  height: 40px;
+  margin: 1% auto;
+  background: linear-gradient(-90deg, #e0e0e0, #b5b5b5, #e0e0e0, #b5b5b5);
+  background-size: 400% 400%;
+  animation: gradient 2s ease infinite;
+  animation-timing-function: jump-start;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

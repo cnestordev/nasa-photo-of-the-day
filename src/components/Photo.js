@@ -21,7 +21,7 @@ function Photo(props) {
         <div className="photo-container">
             <img className="sub-image" src={image} alt="#" />
             <div className="text-container">
-                <p>{explanation.substring(0, 150) + "..."}</p>
+                <p className="p-subPhoto">{explanation.substring(0, 150) + "..."}</p>
             </div>
         </div>
     )

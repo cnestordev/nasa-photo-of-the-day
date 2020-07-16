@@ -10,6 +10,7 @@ function Video(props) {
             <ReactPlayer
                 url={url}
                 width="30%"
+                height="auto"
             />
         </>
     )
