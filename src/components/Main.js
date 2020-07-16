@@ -27,6 +27,12 @@ const Button = styled.button`
     border-radius: 7px;
     font-family: Quicksand;
     margin-top: 1%;
+
+    &:hover {
+        background: #fff;
+        color: gray;
+        cursor: pointer;
+    }
 `
 
 function Main(props) {

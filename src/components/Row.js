@@ -1,7 +1,31 @@
 import React, { useState, useEffect } from 'react'
+import styled from 'styled-components'
 import axios from 'axios'
 import Photo from './Photo'
 import Video from './Video'
+
+const Container = styled.div`
+    background: #2b4350;
+    display: flex;
+    flex-wrap: wrap;
+`
+
+const Button = styled.button`
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    font-size: 0.9rem;
+    padding: 1% 2%;
+    border-radius: 7px;
+    font-family: Quicksand;
+    margin-top: 1%;
+
+    &:hover {
+        background: #fff;
+        color: gray;
+        cursor: pointer;
+    }
+`
 
 function Row(props) {
 
@@ -45,13 +69,13 @@ function Row(props) {
     })
 
     return (
-        <div className="row-container">
+        <Container>
             {photoList}
-            <button onClick={() => {
+            <Button onClick={() => {
                 console.log(arrImg)
                 setCount(count + 1)
-            }}>Row</button>
-        </div>
+            }}>Row</Button>
+        </Container>
     )
 }
 

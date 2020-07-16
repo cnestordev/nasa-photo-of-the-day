@@ -1,10 +1,13 @@
 import React from 'react'
+import styled from 'styled-components'
 
 function Photo(props) {
     console.log(props)
     const { image, explanation } = props
 
     const defaultPic = 'https://picsum.photos/id/237/200/300'
+
+    const Container = styled.div1``
 
     if (!image) {
         return (
