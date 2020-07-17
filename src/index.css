@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla&family=Quicksand&display=swap');
 
+:root {
+  --main-color: #19191b;
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -24,7 +28,7 @@ time, mark, audio, video {
 }
 
 body {
-  background: #15191b;
+  background: var(--main-color);
 }
 
 iframe {
@@ -71,9 +75,9 @@ iframe {
 }
 
 .placeholder {
-  border-radius: 5px;
-  background: linear-gradient(-90deg, #545454, #636363, #636363, #545454);
-  background-size: 400% 400%;
+  border-radius: 10px;
+  background: linear-gradient(-90deg, #292929, #353535, #353535, #292929);
+  background-size: 900% 900%;
   animation: gradient 1s ease infinite;
   animation-direction: alternate;
   animation-timing-function: ease-in-out;

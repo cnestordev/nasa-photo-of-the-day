@@ -7,13 +7,12 @@ const Container = styled.div`
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 8%;
-    justify-content: center;
+    justify-content: space-between;
     padding: 0 10%;
 `
 
 const Image = styled.img`
-    flex-basis: 50%;
-    border-radius: 5px;
+    border-radius: 10px;
     /* box-shadow: 0 0 6px 1px #414141; */
     width: 60%;
 `
@@ -21,31 +20,33 @@ const Image = styled.img`
 const Paragraph = styled.p`
     color: #a0a0a0;
     font-family: Quicksand;
-    width: 90%;
+    font-size: 1rem;
     margin: 1% auto;
-    line-height: 1.8;
+    line-height: 2.5;
     background: transparent;
     padding: 1%;
     border-radius: 5px;
-    flex-basis: 39%;
+    flex-basis: 40%;
+    text-align: left;
+    align-self: center;
 `
 
-const Button = styled.button`
-    background: transparent;
-    color: #fff;
-    border: 2px solid #fff;
-    font-size: 0.9rem;
-    padding: 1% 2%;
-    border-radius: 7px;
-    font-family: Quicksand;
-    margin-top: 1%;
+// const Button = styled.button`
+//     background: transparent;
+//     color: #fff;
+//     border: 2px solid #fff;
+//     font-size: 0.9rem;
+//     padding: 1% 2%;
+//     border-radius: 7px;
+//     font-family: Quicksand;
+//     margin-top: 1%;
 
-    &:hover {
-        background: #fff;
-        color: gray;
-        cursor: pointer;
-    }
-`
+//     &:hover {
+//         background: #fff;
+//         color: gray;
+//         cursor: pointer;
+//     }
+// `
 
 const PlaceholderImage = styled.div`
     width: 60%;
@@ -57,22 +58,26 @@ const PlaceholderText = styled.div`
     width: 85%;
     height: 1.5rem;
     margin: 9% auto;
+    border-radius: 50px;
 `
 
 const PhContainer = styled.div`
     width: 35%;
 `
 
+const Title = styled.h2`
+    font-size: 1.5rem;
+    font-weight: 700;
+`
+
+const Date = styled.p`
+    font-size: 1rem;
+`
+
 function Main(props) {
     const { current, explanation } = props
-    const defaultPic = 'https://picsum.photos/id/237/200/300'
 
-    //state to force a re-render
-    const [count, setCount] = React.useState(0)
-    React.useEffect(() => {
-        console.log('re-rendered app component')
-    }, [count])
-
+    //if props are null, load placeholders
     if (!props.current) {
         return (
             <Container>
@@ -85,10 +90,6 @@ function Main(props) {
                     <PlaceholderText className="placeholder" />
                     <PlaceholderText className="placeholder" />
                 </PhContainer>
-                {/* <Button onClick={() => {
-                    setCount(count + 1)
-                    console.log(count)
-                }}>Re-render</Button> */}
             </Container>
         )
     }
@@ -96,8 +97,11 @@ function Main(props) {
     return (
         <Container>
             <Image className="img-main" src={current} alt="main nasa" />
-            <Paragraph> {explanation} </Paragraph>
-            {/* <Button onClick={() => setCount(count + 1)}>Re-render</Button>{console.log("rendered app")} */}
+            <Paragraph>
+                <Title>{props.title}</Title>
+                <Date>{props.date}</Date>
+                {explanation}
+            </Paragraph>
         </Container>
     )
 }

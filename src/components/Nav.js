@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Header = styled.header`
-    background: #15191b;
+    background: var(--main-color);
     padding: 1rem;
 `
 

@@ -4,7 +4,7 @@ import Nav from './components/Nav'
 import Main from './components/Main'
 import Row from './components/Row'
 
-const backupApi = 'https://jsonblob.com/api/jsonBlob/7dce3f28-c7c3-11ea-9aa1-290ea40c06bc'
+const backupApi = 'https://jsonblob.com/api/jsonBlob/11b2da94-c7ea-11ea-9aa1-21f6f76235b9'
 const nasaUrl = 'https://api.nasa.gov/planetary/apod?api_key=vCGPz8NwvDSv1kXgnzs8mCpRewnbdWt4IXhuy7A3'
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
   useEffect(() => {
     axios.get(backupApi)
       .then(res => {
-        console.log(res.data)
+        console.log(res)
         setCurrentPhoto(res.data)
       })
       .catch(err => {
@@ -24,7 +24,7 @@ function App() {
   return (
     <div className="App">
       <Nav />
-      <Main current={currentPhoto.url} explanation={currentPhoto.explanation} />
+      <Main current={currentPhoto.url} explanation={currentPhoto.explanation} date={currentPhoto.date} title={currentPhoto.title} />
       <Row />
     </div>
   );
