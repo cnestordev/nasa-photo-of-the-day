@@ -9,7 +9,7 @@ const Container = styled.div`
     display: flex;
     flex-wrap: wrap;
     margin: auto;
-    padding: 0 7.5%;
+    padding: 0 8.5%;
 `
 
 const Button = styled.button`
@@ -27,6 +27,12 @@ const Button = styled.button`
         color: gray;
         cursor: pointer;
     }
+`
+
+const Placeholder = styled.div`
+    width: 30%;
+    height: 400px;
+    margin: 1% auto;
 `
 
 function Row(props) {
@@ -74,13 +80,23 @@ function Row(props) {
         }
     })
 
+    if (photoList.length < 3) {
+        return (
+            <Container>
+                <Placeholder className="placeholder" />
+                <Placeholder className="placeholder" />
+                <Placeholder className="placeholder" />
+            </Container>
+        )
+    }
+
     return (
         <Container>
             {photoList}
-            <Button onClick={() => {
+            {/* <Button onClick={() => {
                 console.log(arrImg)
                 setCount(count + 1)
-            }}>Row</Button>
+            }}>Row</Button> */}
         </Container>
     )
 }

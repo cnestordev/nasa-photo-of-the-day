@@ -3,12 +3,12 @@ import styled from 'styled-components'
 
 const Container = styled.div`
     text-align: center;
-    margin: 2% auto;
+    margin: 5% auto;
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 8%;
     justify-content: center;
-    padding: 0 7.5%;
+    padding: 0 10%;
 `
 
 const Image = styled.img`
@@ -27,7 +27,7 @@ const Paragraph = styled.p`
     background: transparent;
     padding: 1%;
     border-radius: 5px;
-    flex-basis: 40%;
+    flex-basis: 39%;
 `
 
 const Button = styled.button`
@@ -85,10 +85,10 @@ function Main(props) {
                     <PlaceholderText className="placeholder" />
                     <PlaceholderText className="placeholder" />
                 </PhContainer>
-                <Button onClick={() => {
+                {/* <Button onClick={() => {
                     setCount(count + 1)
                     console.log(count)
-                }}>Re-render</Button>
+                }}>Re-render</Button> */}
             </Container>
         )
     }

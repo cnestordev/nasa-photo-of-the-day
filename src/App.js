@@ -11,7 +11,7 @@ function App() {
   const [currentPhoto, setCurrentPhoto] = useState('')
 
   useEffect(() => {
-    axios.get(nasaUrl)
+    axios.get(backupApi)
       .then(res => {
         console.log(res.data)
         setCurrentPhoto(res.data)

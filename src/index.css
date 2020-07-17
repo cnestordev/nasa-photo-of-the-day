@@ -72,10 +72,11 @@ iframe {
 
 .placeholder {
   border-radius: 5px;
-  background: linear-gradient(-90deg, #e0e0e0, #b5b5b5, #e0e0e0, #b5b5b5);
+  background: linear-gradient(-90deg, #545454, #636363, #636363, #545454);
   background-size: 400% 400%;
-  animation: gradient 2s ease infinite;
-  animation-timing-function: jump-start;
+  animation: gradient 1s ease infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
 }
 
 /* .placeholderImg {
