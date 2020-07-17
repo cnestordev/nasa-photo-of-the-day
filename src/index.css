@@ -24,17 +24,16 @@ time, mark, audio, video {
 }
 
 body {
-  background: #253944;
+  background: #15191b;
+}
+
+iframe {
+  border-radius: 7px;
 }
 
 .container {
   text-align: center;
   margin: 1% 0;
-}
-
-.img-main {
-  border-radius: 5px;
-  width: 60%;
 }
 
 .p-main {
@@ -71,26 +70,22 @@ body {
   margin: auto;
 }
 
-.placeholderImg {
+.placeholder {
   border-radius: 5px;
-  width: 60%;
-  height: 400px;
-  margin: 1% auto;
   background: linear-gradient(-90deg, #e0e0e0, #b5b5b5, #e0e0e0, #b5b5b5);
   background-size: 400% 400%;
   animation: gradient 2s ease infinite;
   animation-timing-function: jump-start;
 }
 
+/* .placeholderImg {
+  
+} */
+
 .placeholderTxt {
-  border-radius: 5px;
   width: 60%;
   height: 40px;
   margin: 1% auto;
-  background: linear-gradient(-90deg, #e0e0e0, #b5b5b5, #e0e0e0, #b5b5b5);
-  background-size: 400% 400%;
-  animation: gradient 2s ease infinite;
-  animation-timing-function: jump-start;
 }
 
 @keyframes gradient {

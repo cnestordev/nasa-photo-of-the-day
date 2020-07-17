@@ -7,7 +7,10 @@ function Photo(props) {
     const defaultPic = 'https://picsum.photos/id/237/200/300'
 
     const Container = styled.div`
-        padding: 0.5% 0;
+        background: #0e0e0e;
+        border-radius: 14px;
+        box-shadow: 0 0 7px 2px #5a5a5a;
+        padding: 1% 0;
         width: 30%;
         text-align: center;
         margin: 0 2% 1%;
@@ -18,10 +21,10 @@ function Photo(props) {
     `
 
     const Paragraph = styled.p`
-        background: #4e636f;
+        background: transparent;
         border-radius: 5px;
         font-family: Quicksand;
-        color: #bfbfbf;
+        color: #a0a0a0;
         padding: 1%;
         width: 78%;
         margin: auto;
@@ -32,7 +35,8 @@ function Photo(props) {
         margin: 2% 0;
     `
 
-    if (!image) {
+    if (!props) {
+        console.log("NO IMAGE YET")
         return (
             <Container>
                 <Image src={defaultPic} alt="#" />
@@ -45,9 +49,9 @@ function Photo(props) {
 
     return (
         <Container>
-            <Image src={image} alt="#" />
+            <Image src={image} alt="#" />{console.log("rendering photo.js")}
             <div className="text-container">
-                <Paragraph>{explanation.substring(0, 150) + "..."}</Paragraph>
+                <Paragraph>{explanation.substring(0, 200) + "..."}</Paragraph>
             </div>
         </Container>
     )

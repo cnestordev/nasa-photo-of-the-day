@@ -5,9 +5,11 @@ import Photo from './Photo'
 import Video from './Video'
 
 const Container = styled.div`
-    background: #1a2931;
+    background: #15191b;
     display: flex;
     flex-wrap: wrap;
+    margin: auto;
+    padding: 0 7.5%;
 `
 
 const Button = styled.button`
@@ -52,8 +54,12 @@ function Row(props) {
     }, [])
 
     useEffect(() => {
-        console.log("changed", arrImg.length)
-    })
+        if (count === 0) {
+            setTimeout(() => {
+                setCount(count + 1)
+            }, 2000)
+        }
+    }, [count])
 
     const photoList = arrImg.map((item, i) => {
         // debugger;

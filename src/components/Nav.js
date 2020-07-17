@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Header = styled.header`
-    background: #334954;
+    background: #15191b;
     padding: 1rem;
 `
 
@@ -26,7 +26,7 @@ const Ulist = styled.ul`
 
 const Item = styled.li`
     margin-right: 7%;
-    color: #ff6f42;
+    color: #a0a0a0;
     &:hover {
         cursor: pointer;
         color: #fff;
