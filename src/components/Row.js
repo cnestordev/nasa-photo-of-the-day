@@ -5,7 +5,7 @@ import Photo from './Photo'
 import Video from './Video'
 
 const Container = styled.div`
-    background: #2b4350;
+    background: #1a2931;
     display: flex;
     flex-wrap: wrap;
 `

@@ -20,6 +20,8 @@ function Photo(props) {
     const Paragraph = styled.p`
         background: #4e636f;
         border-radius: 5px;
+        font-family: Quicksand;
+        color: #bfbfbf;
         padding: 1%;
         width: 78%;
         margin: auto;

@@ -13,7 +13,7 @@ const Paragraph = styled.p`
     width: 90%;
     margin: 1% auto;
     line-height: 1.3;
-    background: #8899a2;
+    background: #3f464a;
     padding: 1%;
     border-radius: 5px;
 `
